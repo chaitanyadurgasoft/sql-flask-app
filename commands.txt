@@ -1,0 +1,1 @@
+docker run -itd --name dev-postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=student --network pythonnetwork -v pgvol:/var/lib/postgresql/data postgres
