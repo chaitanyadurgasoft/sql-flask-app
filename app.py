@@ -3,7 +3,7 @@ from models import db, Student
 from datetime import datetime
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://admin:latest#1234@database-1.c9gkqmky0948.ap-south-1.rds.amazonaws.com/student'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://admin:latest#1234@dev_mysql_container/student'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)

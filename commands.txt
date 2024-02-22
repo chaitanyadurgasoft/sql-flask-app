@@ -1,1 +1,8 @@
-docker run -itd --name dev-postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=student --network pythonnetwork -v pgvol:/var/lib/postgresql/data postgres
+ mysql -u admin -p -h dev_mysql_container -P 3306 -D student
+
+
+
+docker run -d --name dev_mysql_container -e MYSQL_ROOT_PASSWORD=Test@123 -e MYSQL_DATABASE=student -e MYSQL_USER=admin -e MYSQL_PASSWORD=latest#1234 -p 3306:3306 -v mysqlvol:/var/lib/mysql  --network mysqlnet mysql:latest
+
+
+
